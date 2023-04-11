@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body{
+	background-color: black;
+	font-family: 'Source Code Pro', monospace;
+	color: white;
+	color-scheme: dark;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.scrollshit{
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	scroll-behavior: smooth;
+	position: relative;
+	background: black;
+	overflow-x: hidden;
+}
+
+.scrollshit section{
+	scroll-snap-align: start;
+}
+
+.disNone{
+	display: none;
+}
+
+.firstSec{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	height: 100vh;
+	justify-content: center;
+}
+
+.nameDiv{
+	font-size: 26px;
+	color: white;
+	cursor: default;
+}
+
+.effect{
+	color: limegreen;
+	cursor: default;
+	position: relative;
+}
+
+.typing{
+
+}
+
+.greenbox{
+	position: absolute;
+	right: -11px;
+	top: 3px;
+	background-color: black;
+	height: 14px;
+	width: 9px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.secondSec{
+	position: absolute;
+	display: none;
+	bottom: 0px;
+	height: 80vh;
+	padding-top: 100px;
+	width: 100%;
+	transition: 1s all ease-in-out ;
+}
+
+.abouts{
+	position: absolute;
+	left: 30px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	font-size: 150px;
+	font-weight: lighter;
+	justify-content: flex-end;
+}
+
+.abouts div{
+	transition: font-weight 0.2s ease-in-out;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 100;
+	cursor: pointer;
+	position:absolute;
+	left: 0;
+}
+
+.abouts div:nth-child(1){
+	bottom: 500px;
+}
+.abouts div:nth-child(2){
+	bottom: 300px;
+}
+
+.abouts div:first-child{
+	padding-top: 100px;
+}
+
+.abouts div:hover{
+	font-weight: 900;
+}
+
+.upwork{
+	padding-bottom: 100px;
+	
+}
+
+.upwork a{
+	color: inherit;
+	text-decoration: none!important;
+}
+
+.upwork:hover{
+	color: limegreen!important;
+
+}
+
+
+
+
+
+
+
+
+
+
+.about{
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+	bottom: 20%;
+	transform: translateX(100%);
+	transition: 1s transform  ease-in-out;
+	visibility: hidden;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 100%;
+	
+}
+
+.about-container{
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+}
+
+.aboutImgDiv{
+	min-height: 200px;
+	min-width: 200px;
+	max-height: 200px;
+	max-width: 200px;
+	width: 25%;
+}
+
+.aboutImgDiv img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 50%;
+	aspect-ratio: 1:1;
+}
+
+.aboutTop{
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	gap: 20px;
+	padding-top: 100px;
+}
+
+.aboutBottom{
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 30px;
+	font-size: 18px;
+}
+
+.aboutTopLeft{
+	display: flex;
+	flex-direction: column;
+	gap:25px;
+	height: 200px;
+	justify-content: center;
+	width:75%;
+}
+
+.aboutName{
+	font-size: 38px;
+}
+
+.aboutTitle{
+	font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.projects{
+	width: 100%;
+	position: absolute;
+	bottom: 50%;
+	transform: translate(100%,50%);
+	transition: 1s transform  ease-in-out;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.projects-container{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.projectDiv{
+	width: 100%;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: -05px;
+	color: white!important;
+	font-size: 18px;
+	text-decoration: none!important;
+}
+
+.projects1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.projects2{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.card-cont{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.project-card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	align-items: center;
+	background-color: rgb(33, 32, 32);
+	width: 470px;
+	height: 280px;
+	padding-top: 10px;
+	border-radius: 15px;
+}
+
+.project-card img{
+	width: 420px;
+	border-radius: 15px;
+}
+
+.caption{
+	font-size: 18px;
+}
+
+
+svg{
+	fill: white;
+	height: 100%;
+}
+
+.svgDiv{
+	position: absolute;
+	left: 270px;
+	top: 30px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.svgPr{
+	top: 10px;
+	left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
