@@ -30,8 +30,6 @@ name.onmouseover = () => {
 	},10)
 }
 
-tere()
-
 function tere(){
 	let i=0
 	const myInterval = setInterval(() => {
@@ -90,7 +88,7 @@ function type(){
 let timer=0
 
 let peroInterval = setInterval(function(){
-	if(timer<2){
+	if(timer<6){
 		timer++
 	}
 	else{
@@ -99,8 +97,8 @@ let peroInterval = setInterval(function(){
 }, 1000)
 
 
-let posledenInterval= setInterval(function(){
-	if(timer==1){
+let posledenInterval = setInterval(function(){
+	if(timer==5){
 		setInterval(function(){
 			greenbox.style.backgroundColor = "black"
 		},800)
@@ -112,13 +110,20 @@ let posledenInterval= setInterval(function(){
 		}, 400)
 	}
 
-	if(timer==2){
+	if(timer==6){
 		myInterval = setInterval(type,100)
 		clearInterval(posledenInterval)
 		
 	}
 
 },1999)
+
+
+
+
+
+
+
 
 
 const secondSec = document.querySelector(".secondSec")
@@ -130,8 +135,9 @@ const scrollShit = document.querySelector(".scrollshit")
 setTimeout(function(){
 	secondSec.style.display = "flex"
 	scrollShit.style.height = "200vh"
+	body.style.overflowY="scroll"
 	setTimeout(() =>{scrollShit.style.transition = "2s"},50)
-}, 5000)
+}, 10000)
 
 const body = document.querySelector("body")
 
@@ -142,6 +148,8 @@ let anInterval = setInterval(() =>{
 		setTimeout(()=>{firstSec.style.display="none"},100)
 		console.log("none")
 		scrollShit.style.overflow = "hidden"
+		c.style.opacity = "0"
+		setTimeout(()=>{c.style.display = "none"},1000)
 	}
 }, 50)
 
@@ -156,6 +164,14 @@ about.addEventListener("click", ()=>{
 	secondSec.style.transform = " translateX(-100%)"
 })
 
+const mobabout = document.querySelector("#aboutmob")
+
+mobabout.addEventListener("click", ()=>{
+	realAbout.style.transform = " translateX(0%)"
+	realAbout.style.visibility = "visible"
+	secondSec.style.transform = " translateX(-100%)"
+})
+
 const projects = document.querySelector(".projects")
 const fakeProjects = document.querySelector("#fake")
 
@@ -163,6 +179,34 @@ fakeProjects.addEventListener("click", ()=>{
 	projects.style.transform = " translate(0%,50%)"
 	projects.style.visibility = "visible"
 	projects.style.pointerEvents = "auto"
+	secondSec.style.transform = " translateX(-100%)"
+})
+
+const devmob = document.querySelector("#devmob")
+
+devmob.addEventListener("click", ()=>{
+	projects.style.transform = " translate(0%,50%)"
+	projects.style.visibility = "visible"
+	projects.style.pointerEvents = "auto"
+	secondSec.style.transform = " translateX(-100%)"
+})
+
+const design = document.querySelector(".designProjects")
+const fakee = document.querySelector("#fakee")
+
+fakee.addEventListener("click", ()=>{
+	design.style.transform = " translate(0%,50%)"
+	design.style.visibility = "visible"
+	design.style.pointerEvents = "auto"
+	secondSec.style.transform = " translateX(-100%)"
+})
+
+const desmob = document.querySelector("#desmob")
+
+desmob.addEventListener("click", ()=>{
+	design.style.transform = " translate(0%,50%)"
+	design.style.visibility = "visible"
+	design.style.pointerEvents = "auto"
 	secondSec.style.transform = " translateX(-100%)"
 })
 
@@ -186,6 +230,124 @@ backs[1].addEventListener("click", ()=>{
 	
 	
 })
+
+backs[2].addEventListener("click", ()=>{
+	design.style.transform = " translate(100%,50%)"
+	secondSec.style.transform = " translateX(00%)"
+	setTimeout(()=>{
+	design.style.visibility = "hidden"
+	design.style.pointerEvents = "none"},1000
+	)
+	
+	
+})
+
+bukvi = document.querySelectorAll(".imeto div")
+
+let b=0
+
+
+function padatBukvi(){
+	if(b<bukvi.length){
+		setTimeout(()=>{
+			bukvi[b].style.transform = "translateY(0)"
+			b++
+			padatBukvi()
+		},100)
+	}
+	else{
+		setTimeout(tere,1000)
+		setTimeout(()=>{
+			for(let i=0; i<bukvi.length; i++){
+				bukvi[i].style.display="none";
+			}
+			name.style.opacity = "1"
+		},1000)
+		
+	}
+}
+
+
+setTimeout(padatBukvi, 3000);
+
+
+
+const greenarrow = document.querySelector("#greenarrow")
+const upwork = document.querySelector(".upwork")
+
+upwork.addEventListener("mouseover", ()=>{
+	setTimeout(()=>{
+		greenarrow.style.opacity = "1"
+	},200)
+})
+
+upwork.addEventListener("mouseout", ()=>{
+		greenarrow.style.opacity = "0"
+
+})
+
+fakee.addEventListener("mouseover", ()=>{
+	greenarrow.style.opacity = "0"
+})
+
+
+
+
+
+
+
+
+
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+//making the canvas full screen
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+
+//chinese characters - taken from the unicode charset
+var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+//converting the string into an array of single characters
+matrix = matrix.split("");
+
+var font_size = 12;
+var columns = c.width/font_size; //number of columns for the rain
+//an array of drops - one per column
+var drops = [];
+//x below is the x coordinate
+//1 = y co-ordinate of the drop(same for every drop initially)
+for(var x = 0; x < columns; x++)
+	drops[x] = 1; 
+
+//drawing the characters
+function draw()
+{
+	//Black BG for the canvas
+	//translucent BG to show trail
+	ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+	ctx.fillRect(0, 0, c.width, c.height);
+
+	ctx.fillStyle = "limegreen";//green text
+	ctx.font = font_size + "px arial";
+	//looping over drops
+	for(var i = 0; i < drops.length; i++)
+	{
+		//a random chinese character to print
+		var text = matrix[Math.floor(Math.random()*matrix.length)];
+		//x = i*font_size, y = value of drops[i]*font_size
+		ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+		//sending the drop back to the top randomly after it has crossed the screen
+		//adding a randomness to the reset to make the drops scattered on the Y axis
+		if(drops[i]*font_size > c.height && Math.random() > 0.975)
+			drops[i] = 0;
+
+		//incrementing Y coordinate
+		drops[i]++;
+	}
+}
+
+setInterval(draw, 35);
 
 
 
