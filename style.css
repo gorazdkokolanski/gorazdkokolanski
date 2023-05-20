@@ -376,6 +376,21 @@ svg{
 	border: 1px solid white;
 }
 
+.tobe{
+	width: 420px;
+	height: 226px;
+	background-color: #878787;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.project-card:has(.tobe){
+	opacity: 0.8;
+}
+
 #greenarrow{
 	position: absolute;
 	top: 60px;
@@ -519,6 +534,10 @@ svg{
 		margin-top: -5px;
 	}
 	.project-card img{
+		width: 204px!important;
+		height: 110px!important;
+	}
+	.tobe{
 		width: 204px!important;
 		height: 110px!important;
 	}
