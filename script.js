@@ -146,7 +146,6 @@ let anInterval = setInterval(() =>{
 	if(scrolled>30){
 		scrollShit.style.height = "100vh"
 		setTimeout(()=>{firstSec.style.display="none"},100)
-		console.log("none")
 		scrollShit.style.overflow = "hidden"
 		c.style.opacity = "0"
 		setTimeout(()=>{c.style.display = "none"},1000)
@@ -191,24 +190,6 @@ devmob.addEventListener("click", ()=>{
 	secondSec.style.transform = " translateX(-100%)"
 })
 
-const design = document.querySelector(".designProjects")
-const fakee = document.querySelector("#fakee")
-
-fakee.addEventListener("click", ()=>{
-	design.style.transform = " translate(0%,50%)"
-	design.style.visibility = "visible"
-	design.style.pointerEvents = "auto"
-	secondSec.style.transform = " translateX(-100%)"
-})
-
-const desmob = document.querySelector("#desmob")
-
-desmob.addEventListener("click", ()=>{
-	design.style.transform = " translate(0%,50%)"
-	design.style.visibility = "visible"
-	design.style.pointerEvents = "auto"
-	secondSec.style.transform = " translateX(-100%)"
-})
 
 const backs = document.querySelectorAll(".svgDiv")
 
@@ -226,17 +207,6 @@ backs[1].addEventListener("click", ()=>{
 	setTimeout(()=>{
 	projects.style.visibility = "hidden"
 	projects.style.pointerEvents = "none"},1000
-	)
-	
-	
-})
-
-backs[2].addEventListener("click", ()=>{
-	design.style.transform = " translate(100%,50%)"
-	secondSec.style.transform = " translateX(00%)"
-	setTimeout(()=>{
-	design.style.visibility = "hidden"
-	design.style.pointerEvents = "none"},1000
 	)
 	
 	
@@ -274,8 +244,14 @@ setTimeout(padatBukvi, 3000);
 
 const greenarrow = document.querySelector("#greenarrow")
 const upwork = document.querySelector(".upwork")
+const upworka = document.querySelector(".upwork a")
 
 upwork.addEventListener("mouseover", ()=>{
+	
+	if(upworka.style.fontWeight =="100"){
+		greenarrow.style.opacity = "0"
+		return
+	}
 	setTimeout(()=>{
 		greenarrow.style.opacity = "1"
 	},200)
@@ -286,9 +262,13 @@ upwork.addEventListener("mouseout", ()=>{
 
 })
 
-fakee.addEventListener("mouseover", ()=>{
+fakeProjects.addEventListener("mouseover", ()=>{
 	greenarrow.style.opacity = "0"
+	setTimeout(()=>{
+		greenarrow.style.opacity = "0"
+	},210)
 })
+
 
 
 
@@ -348,28 +328,3 @@ function draw()
 }
 
 setInterval(draw, 35);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
