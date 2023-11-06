@@ -36,7 +36,9 @@ section {
     left: 100px;
     transition: 2s all linear;
     opacity: 1;
+    transform: translate(-50%, -50%);
 }
+
 
 .gorazd,
 .kokolanski {
