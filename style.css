@@ -1,552 +1,358 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap');
 
-
-body{
-	background-color: black;
-	font-family: 'Source Code Pro', monospace;
-	color: white;
-	color-scheme: dark;
-	overflow-x: hidden;
-	overflow-y: hidden;
-}
-
-*{
-	margin: 0;
-	padding: 0;
-
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #A06EB1;
 }
 
 a{
-	color: inherit;
-	text-decoration: none;
+    text-decoration: none;
 }
 
-.scrollshit{
-	overflow-y: hidden;
-	scroll-snap-type: y mandatory;
-	height: 100vh;
-	scroll-behavior: smooth;
-	position: relative;
-	background: black;
-	overflow-x: hidden;
+.bodyy {
+    cursor: url("img/bucket.png"), auto;
 }
 
-.scrollshit section{
-	scroll-snap-align: start;
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+    position: relative;
+    height: 100%;
 }
 
-.disNone{
-	display: none;
+.lilsplash{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transition: 2s all linear;
+    opacity: 1;
 }
 
-.firstSec{
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-	align-items: center;
-	height: 100vh;
-	justify-content: center;
-	position: relative;
-	z-index: 2;
+.gorazd,
+.kokolanski {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
 }
 
-.nameDiv{
-	font-size: 26px;
-	color: white;
-	cursor: default;
-	opacity: 0;
+.gorazd *,
+.kokolanski * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
-.effect{
-	color: limegreen;
-	cursor: default;
-	position: relative;
+.gorazd img:nth-child(2n), .kokolanski img:nth-child(2n){
+    animation: 2s linear animation1;
 }
 
-.typing{
-
+.gorazd img:nth-child(2n+1), .kokolanski img:nth-child(2n+1){
+    animation: 1.5s linear animation2;
 }
 
-.greenbox{
-	position: absolute;
-	right: -11px;
-	top: 3px;
-	background-color: black;
-	height: 14px;
-	width: 9px;
+@keyframes animation1{
+    from {
+        transform: translateX(-2000px);
+    }
+    20%{
+        transform: translateX(-1600px) rotate(90deg);
+    }
+    40%{
+        transform: translateX(-1200px) rotate(-90deg);
+    }
+    60%{
+        transform: translateX(-800px) rotate(90deg);
+    }
+    80%{
+        transform: translateX(-400px) rotate(-90deg);
+    }
+    to {
+        transform: translateX(0px);
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.secondSec{
-	position: absolute;
-	display: none;
-	bottom: 0px;
-	height: 100vh;
-	width: 100%;
-	transition: 1s all ease-in-out ;
+@keyframes animation2{
+    from {
+        transform: translateX(-2000px);
+    }
+    20%{
+        transform: translateX(-1600px) rotate(-90deg);
+    }
+    40%{
+        transform: translateX(-1200px) rotate(90deg);
+    }
+    60%{
+        transform: translateX(-800px) rotate(-90deg);
+    }
+    80%{
+        transform: translateX(-400px) rotate(90deg);
+    }
+    to {
+        transform: translateX(0px);
+    }
 }
 
-.abouts{
-	position: absolute;
-	bottom: 50%;
-	left: 40px;
-	transform: translateY(50%);
-	display: flex;
-	flex-direction: column;
-	gap: 0px;
-	font-size: 150px;
-	font-weight: lighter;
-	justify-content: flex-end;
+.gorazd {
+    gap: 0;
 }
 
-.abouts div{
-	transition: font-weight 0.2s ease-in-out;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 100;
-	cursor: pointer;
-	height: 150px;
+.menu {
+    position: absolute;
+    top: 50px;
+    height: 77px;
+    width: 77px;
+    right: 50px;
 }
 
-.abouts div:hover{
-	font-weight: 900;
+.menu>* {
+    position: absolute;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    background-color: #631F7A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    font-size: 30px;
+    color: white;
+    transition: 0.2s all ease;
 }
 
-.upwork{
-	position: relative;
-	z-index: -2;
+.hamburger {
+    position: absolute;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    background-color: #631F7A;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.upwork a{
-	color: inherit;
-	text-decoration: none!important;
+.about {
+    position: absolute;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    background-color: #631F7A;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.upwork:hover{
-	color: limegreen!important;
-
+.projects {
+    position: absolute;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    background-color: #631F7A;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-.about{
-	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	position: absolute;
-	transform: translateX(100%);
-	transition: 1s transform  ease-in-out;
-	visibility: hidden;
-	height: 100vh;
+.upwork {
+    position: absolute;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    background-color: #631F7A;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container{
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 10px;
-	width: 100%;
-	
+.aboutt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url("img/bigsplash.png");
+    background-size: 100% 100%;
 }
 
-.about-container{
-	display: flex;
-	flex-direction: column;
-	gap: 50px;
-	align-items: center;
+section p {
+    font-size: 34px;
+    color: white;
+    width: 70%;
+    margin: 20px 0;
 }
 
-.aboutImgDiv{
-	min-height: 200px;
-	min-width: 200px;
-	max-height: 200px;
-	max-width: 200px;
-	width: 25%;
+.skills {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 50px;
 }
 
-.aboutImgDiv img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: top;
-	border-radius: 50%;
+.about-section {
+    display: flex;
 }
 
-.aboutTop{
-	display: flex;
-	width: 70%;
-	gap: 20px;
+.projectss {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: 1000px;
 }
 
-.aboutBottom{
-	width: 70%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	gap: 30px;
-	font-size: 18px;
+.projectss>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 150px;
 }
 
-.aboutBottomBottom{
-	display: flex;
-	align-items: center;
-	padding-top: 20px;
-	gap: 150px;
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 20px;
+    color: white;
+    letter-spacing: 0.5px;
+    background-color: #5E2F8D;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-.aboutTopLeft{
-	display: flex;
-	flex-direction: column;
-	gap:25px;
-	height: 140px;
-	justify-content: center;
-	width:75%;
-}
-
-.aboutName{
-	font-size: 38px;
-}
-
-.aboutTitle{
-	font-size: 22px;
-}
-
-
-
-
-
-
-
-
-
-
-.designProjects{
-	width: 100%;
-	position: absolute;
-	bottom: 50%;
-	transform: translate(100%,50%);
-	transition: 1s transform  ease-in-out;
-	pointer-events: none;
-	visibility: hidden;
-	height: 100vh;
-}
-
-.projects{
-	width: 100%;
-	position: absolute;
-	bottom: 50%;
-	transform: translate(100%,50%);
-	transition: 1s transform  ease-in-out;
-	pointer-events: none;
-	visibility: hidden;
-	height: 100vh;
-}
-
-.projects-container{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	gap: 20px;
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.projectDiv{
-	width: 100%;
-	font-size: 40px;
-	display: flex;
-	justify-content: center;
-	margin-bottom: -05px;
-	color: white!important;
-	font-size: 18px;
-	text-decoration: none!important;
-}
-
-.projects1{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-}
-
-.projects2{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.card-cont{
-	display: flex;
-	justify-content: center;
-	width: 50%;
-}
-
-.project-card{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 10px;
-	align-items: center;
-	background-color: rgb(33, 32, 32);
-	width: 470px;
-	height: 280px;
-	padding-top: 10px;
-	border-radius: 15px;
-}
-
-.project-card img{
-	width: 420px;
-	border-radius: 15px;
-}
-
-.caption{
-	font-size: 18px;
-}
-
-
-svg{
-	fill: white;
-	height: 100%;
-}
-
-.svgDiv{
-	position: absolute;
-	left: 55px;
-	top: 55px;
-	height: 50px;
-	cursor: pointer;
-}
-
-.svgPr{
-	top: 10px;
-	left: 100px;
-}
-
-#c{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	height: 1024px;
-	z-index: 1;
-	opacity: 0.2;
-	transition: 1s ease all;
-}
-
-.imeto{
-	position: absolute;
-	display: flex;
-	align-items: center;
-	gap: 0.1px;
-	top: 0px;
-	font-size: 26px;
-}
-
-.imeto div{
-	transition: 0.3s ease;
-	transform: translateY(-800px);
-}
-
-.k1{
-	margin-left: 15px;
-}
-
-#desPh{
-	width: 420px;
-	height: 226px;
-	border: 1px solid white;
-}
-
-.tobe{
-	width: 420px;
-	height: 226px;
-	background-color: #878787;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	border-radius: 15px;
-}
-
-.project-card:has(.tobe){
-	opacity: 0.8;
-}
-
-#greenarrow{
-	position: absolute;
-	top: 58px;
-	right: -25px;
-	opacity: 0;
-}
-
-.mobile-menu{
-	display: none;
+.project img {
+    height: 170px;
+    width: 300px;
 }
 
 @media only screen and (max-width:768px){
-	#c{
-		width: 100%!important;
-		overflow-x: hidden;
-	}
-	.abouts{
-		display: none;
-	}
-	.mobile-menu{
-		display: flex;
-		flex-direction: column;
-		gap: 85px;
-		align-items: center;
-		justify-content: center;
-	}
-	.mobile-menu > div{
-		clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
-		width: 240px;
-		height: 60px;
-		color: limegreen;
-		position: relative;
-		background-color: black;
-		z-index: 10;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-	}
-	.mobile-menu > div > div:nth-child(1){
-		position: absolute;
-		width: 253px;
-		height: 61px;
-		clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: limegreen;
-		z-index: -1;
-	}
+    .gorazd img, .kokolanski img{
+        height: 60px;
+    }
 
-	.mobile-menu > div > div:nth-child(2){
-		clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
-		width: 232px;
-		height: 57px;
-		color: limegreen;
-		position: absolute;
-		background-color: black;
-		z-index: 10;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		font-size: 18px;
-		font-style: italic;
-		letter-spacing: 10%;
-	}
+    .menu {
+        position: absolute;
+        top: 20px;
+        height: 77px;
+        width: 77px;
+        right: 0px;
+    }
 
-	.mobile-menu > div > div:nth-child(2) a{
-		text-decoration: underline;
-	}
+    .menu>* {
+        position: absolute;
+        height: 57px;
+        width: 57px;
+        border-radius: 50%;
+        background-color: #631F7A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        transition: 0.2s all ease;
+    }
 
-	.secondSec{
-		justify-content: center;
-		align-items: center;
-	}
+    .menu .hamburger img{
+        height: 15px;
+    }
 
-	.about-container{
-		width: 90%;
-		gap: 20px;
-	}
+    .upwork img{
+        height: 25px;
+    }
 
-	.aboutTop{
-		width: 90%;
-	}
+    .projectss{
+        height: 100%;
+        padding-top: 200px;
+    }
 
-	.aboutTopLeft{
-		width: 100%;
-	}
-	.aboutName{
-		font-size: 27px;
-	}
-	.aboutTitle{
-		font-size: 18px;
-	}
-	.aboutBottom{
-		width: 90%;
-		font-size: 16px;
-	}
-	.aboutBottomBottom img{
-		height: 80px;
-	}
+    .projectss>div{
+        flex-direction: column;
+        gap: 60px;
+    }
 
-	#js{
-		height: 69px;
-	}
-	.aboutBottomBottom{
-		gap: 41px;
-	}
-	.svgDiv{
-		top: 26px;
-		left: 26px;
-	}
-	.svgDiv svg{
-		height: 34px;
-	}
-	.projects-container{
-		gap: 20px;
-	}
-	.projects1{
-		flex-direction: column;
-		gap: 20px;
-	}
-	.card-cont{
+    .projectss{
+        gap: 60px;
+    }
 
-	}
-	.project-card{
-		width: 228px;
-		height: 136px;
-	}
-	.caption{
-		font-size: 11px;
-		margin-top: -5px;
-	}
-	.project-card img{
-		width: 204px!important;
-		height: 110px!important;
-	}
-	.tobe{
-		width: 204px!important;
-		height: 110px!important;
-	}
+    .project img {
+        height: 150px;
+        width: 270px;
+    }
+
+    .aboutt{
+        height: 1250px;
+    }
+
+    .thex{
+        height: 20px;
+    }
+
+    .aboutt2{
+        height: 100%;
+    }
+
+    .about-sectionn{
+        height: 100%;
+    }
+
+    body:has(.about-sectionn){
+        height: 100%;
+        min-height: 650px;
+    }
+
+    .skills{
+        flex-wrap: wrap;
+        width: 80%;
+        gap: 20px;
+    }
+
+    .skills img{
+        width: 18%;
+    }
+
+    section p{
+        font-size: 22px;
+        margin: 5px 0;
+        width: 85%;
+    }
+
+    section p:nth-child(1){
+        padding-top: 20px;
+    }
+
 }
 
+@media only screen and (max-width:520px){
+    .gorazd img, .kokolanski img{
+        height: 45px;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width:380px){
+    .gorazd img, .kokolanski img{
+        height: 40px;
+    }
+}
