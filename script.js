@@ -30,7 +30,7 @@ const splashAudio = document.querySelector("#splash")
 const lopotavica = document.querySelector("#lopotavica")
 
 window.addEventListener("load", ()=>{
-    lopotavica.play()
+    
 })
 
 body.addEventListener("click", (e)=>{
