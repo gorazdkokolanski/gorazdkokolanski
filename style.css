@@ -39,7 +39,6 @@ section {
     transform: translate(-50%, -50%);
 }
 
-
 .gorazd,
 .kokolanski {
     display: flex;
@@ -64,48 +63,42 @@ section {
 }
 
 .gorazd img:nth-child(2n+1), .kokolanski img:nth-child(2n+1){
-    animation: 1.5s linear animation2;
+    animation: 1.5s linear animation1;
 }
 
 @keyframes animation1{
     from {
-        transform: translateX(-2000px);
+        transform: translate(-2000px, 0px);
+    }
+    10%{
+        transform: translate(-1800px, -100px) rotate(90deg);
     }
     20%{
-        transform: translateX(-1600px) rotate(90deg);
+        transform: translate(-1600px, -100px) rotate(90deg);
+    }
+    30%{
+        transform: translate(-1400px, -100px) rotate(90deg);
     }
     40%{
-        transform: translateX(-1200px) rotate(-90deg);
+        transform: translate(-1200px, 00px) rotate(-90deg);
+    }
+    50%{
+        transform: translate(-1000px, -100px) rotate(90deg);
     }
     60%{
-        transform: translateX(-800px) rotate(90deg);
+        transform: translate(-800px, 0) rotate(90deg);
+    }
+    70%{
+        transform: translate(-600px, -100px) rotate(90deg);
     }
     80%{
-        transform: translateX(-400px) rotate(-90deg);
+        transform: translate(-400px, 00px) rotate(-90deg);
+    }
+    90%{
+        transform: translate(-200px, -100px) rotate(90deg);
     }
     to {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes animation2{
-    from {
-        transform: translateX(-2000px);
-    }
-    20%{
-        transform: translateX(-1600px) rotate(-90deg);
-    }
-    40%{
-        transform: translateX(-1200px) rotate(90deg);
-    }
-    60%{
-        transform: translateX(-800px) rotate(-90deg);
-    }
-    80%{
-        transform: translateX(-400px) rotate(90deg);
-    }
-    to {
-        transform: translateX(0px);
+        transform: translate(0px, 0);
     }
 }
 
