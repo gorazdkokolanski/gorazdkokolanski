@@ -27,10 +27,6 @@ hamburger.addEventListener("click", () => {
 
 const body = document.querySelector("section")
 const splashAudio = document.querySelector("#splash")
-const lopotavica = document.querySelector("#lopotavica")
-
-window.addEventListener("load", ()=>{
-})
 
 body.addEventListener("click", (e)=>{
     x = e.clientX
@@ -51,4 +47,3 @@ body.addEventListener("click", (e)=>{
     splashAudio.play()
 })
 
-lopotavica.play()
