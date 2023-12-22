@@ -58,50 +58,6 @@ section {
     user-select: none;
 }
 
-.gorazd img:nth-child(2n), .kokolanski img:nth-child(2n){
-    animation: 2s linear animation1;
-}
-
-.gorazd img:nth-child(2n+1), .kokolanski img:nth-child(2n+1){
-    animation: 1.5s linear animation1;
-}
-
-@keyframes animation1{
-    from {
-        transform: translate(-2000px, 0px);
-    }
-    10%{
-        transform: translate(-1800px, -100px) rotate(90deg);
-    }
-    20%{
-        transform: translate(-1600px, -100px) rotate(90deg);
-    }
-    30%{
-        transform: translate(-1400px, -100px) rotate(90deg);
-    }
-    40%{
-        transform: translate(-1200px, 00px) rotate(-90deg);
-    }
-    50%{
-        transform: translate(-1000px, -100px) rotate(90deg);
-    }
-    60%{
-        transform: translate(-800px, 0) rotate(90deg);
-    }
-    70%{
-        transform: translate(-600px, -100px) rotate(90deg);
-    }
-    80%{
-        transform: translate(-400px, 00px) rotate(-90deg);
-    }
-    90%{
-        transform: translate(-200px, -100px) rotate(90deg);
-    }
-    to {
-        transform: translate(0px, 0);
-    }
-}
-
 .gorazd {
     gap: 0;
 }
@@ -336,42 +292,6 @@ section p {
 
     section p:nth-child(1){
         padding-top: 20px;
-    }
-
-    @keyframes animation1{
-        from {
-            transform: translate(-2000px, 0px);
-        }
-        10%{
-            transform: translate(-1800px, -70px) rotate(90deg);
-        }
-        20%{
-            transform: translate(-1600px, -70px) rotate(90deg);
-        }
-        30%{
-            transform: translate(-1400px, -70px) rotate(90deg);
-        }
-        40%{
-            transform: translate(-1200px, 00px) rotate(-90deg);
-        }
-        50%{
-            transform: translate(-1000px, -70px) rotate(90deg);
-        }
-        60%{
-            transform: translate(-800px, 0) rotate(90deg);
-        }
-        70%{
-            transform: translate(-600px, -70px) rotate(90deg);
-        }
-        80%{
-            transform: translate(-400px, 00px) rotate(-90deg);
-        }
-        90%{
-            transform: translate(-200px, -70px) rotate(90deg);
-        }
-        to {
-            transform: translate(0px, 0);
-        }
     }
 
 }
