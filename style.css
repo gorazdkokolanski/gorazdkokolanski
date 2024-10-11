@@ -641,6 +641,7 @@ section {
 
     .modal{
         padding: 15px 10px;
+        border-radius: 15px;
     }
 
     .projects-modal>P{
@@ -677,6 +678,25 @@ section {
     .socials-modal{
         top: 65%;
         left: 35%;
+    }
+
+    .socials-modal{
+        gap: 10px;
+    }
+
+    .socials-modal>P{
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    .modal-x img{
+        height: 14px;
+    }
+
+    .modal-x{
+        top: 7px;
+        left: 10px;
     }
 
 }
