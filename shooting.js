@@ -15,7 +15,7 @@ const projects = document.querySelectorAll(".project")
 
 window.addEventListener("click", (e) => {
 
-    if(window.innerWidth<1024){
+    if (window.innerWidth < 1024) {
         return
     }
 
@@ -33,25 +33,27 @@ window.addEventListener("click", (e) => {
     shootingEl.innerHTML = `<img src="img/kunai.svg" alt="kunai">`
     let rect = ninjaContainer.getBoundingClientRect();
     document.querySelector("#projects").appendChild(shootingEl)
-    if(e.clientX<window.innerWidth/6){
+    if (e.clientX < window.innerWidth / 6) {
         shootingEl.style.transform = "rotate(-110deg)"
-    } 
-    else if(e.clientX<window.innerWidth/4){
+    }
+    else if (e.clientX < window.innerWidth / 4) {
         shootingEl.style.transform = "rotate(-90deg)"
     }
-    else if(e.clientX<window.innerWidth/3.2){
+    else if (e.clientX < window.innerWidth / 3.2) {
         shootingEl.style.transform = "rotate(-65deg)"
-    }    
-    else if(e.clientX<window.innerWidth/2){
+    }
+    else if (e.clientX < window.innerWidth / 2) {
         shootingEl.style.transform = "rotate(-60deg)"
-    } 
-    else if(e.clientX<window.innerWidth/1.5){
+    }
+    else if (e.clientX < window.innerWidth / 1.5) {
         shootingEl.style.transform = "rotate(-30deg)"
     }
-    else if(e.clientX<window.innerWidth/1.3){
+    else if (e.clientX < window.innerWidth / 1.3) {
         shootingEl.style.transform = "rotate(-15deg)"
     }
-    // if(e.clientY<window.innerHeight/2)
+    if (e.clientY > window.innerHeight / 2) {
+        shootingEl.style.transform = "none"
+    }
     setTimeout(() => {
         shootingEl.style.left = `${rect.left + shootingEl.offsetWidth}px`
         shootingEl.style.top = `${rect.top}px`
@@ -59,19 +61,17 @@ window.addEventListener("click", (e) => {
     setTimeout(() => {
         shootingEl.style.left = `${e.clientX}px`
         shootingEl.style.top = `${e.clientY}px`
-        console.log(e.clientX)
-        console.log(e.clientY)
     }, 40);
 
-    let theInterval = setInterval(()=>{
-        projects.forEach(pr=>{
-            if(areElementsTouching(shootingEl, pr)){
+    let theInterval = setInterval(() => {
+        projects.forEach(pr => {
+            if (areElementsTouching(shootingEl, pr)) {
                 pr.click()
             }
-            else{
+            else {
             }
         })
-    },100)
+    }, 100)
 
     shootingEl.addEventListener("transitionend", () => {
         shootingEl.style.display = `none`
