@@ -50,14 +50,18 @@ header {
 
 .header-container>a {
     margin-top: 45px;
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.header-container>a>img{
+    height: 25px;
 }
 
 .menu-button-container {
@@ -261,7 +265,7 @@ section {
     position: absolute;
     z-index: 20;
     transition: 2s all linear;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -50%);
 }
 
 .about-container {

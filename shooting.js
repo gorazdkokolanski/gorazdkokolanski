@@ -34,33 +34,35 @@ window.addEventListener("click", (e) => {
     let rect = ninjaContainer.getBoundingClientRect();
     document.querySelector("#projects").appendChild(shootingEl)
     if (e.clientX < window.innerWidth / 6) {
-        shootingEl.style.transform = "rotate(-110deg)"
+        shootingEl.style.transform = "rotate(-110deg) translate(-50%, -50%)"
     }
     else if (e.clientX < window.innerWidth / 4) {
-        shootingEl.style.transform = "rotate(-90deg)"
+        shootingEl.style.transform = "rotate(-90deg) translate(-50%, -50%)"
     }
     else if (e.clientX < window.innerWidth / 3.2) {
-        shootingEl.style.transform = "rotate(-65deg)"
+        shootingEl.style.transform = "rotate(-65deg) translate(-50%, -50%)"
     }
     else if (e.clientX < window.innerWidth / 2) {
-        shootingEl.style.transform = "rotate(-60deg)"
+        shootingEl.style.transform = "rotate(-60deg) translate(-50%, -50%)"
     }
     else if (e.clientX < window.innerWidth / 1.5) {
-        shootingEl.style.transform = "rotate(-30deg)"
+        shootingEl.style.transform = "rotate(-30deg) translate(-50%, -50%)"
     }
     else if (e.clientX < window.innerWidth / 1.3) {
-        shootingEl.style.transform = "rotate(-15deg)"
+        shootingEl.style.transform = "rotate(-15deg) translate(-50%, -50%)"
     }
     if (e.clientY > window.innerHeight / 2) {
-        shootingEl.style.transform = "none"
+        shootingEl.style.transform = "translate(-50%, -50%)"
     }
+    console.log(e.clientX - rect.left + shootingEl.offsetWidth)
+    console.log(e.clientY - rect.top)
     setTimeout(() => {
         shootingEl.style.left = `${rect.left + shootingEl.offsetWidth}px`
         shootingEl.style.top = `${rect.top}px`
     }, 20);
     setTimeout(() => {
-        shootingEl.style.left = `${e.clientX}px`
-        shootingEl.style.top = `${e.clientY}px`
+        shootingEl.style.left = `${e.clientX + (e.clientX - rect.left + shootingEl.offsetWidth)*2}px`
+        shootingEl.style.top = `${e.clientY + (e.clientY - rect.top)*2}px`
     }, 40);
 
     let theInterval = setInterval(() => {
